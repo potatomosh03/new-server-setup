@@ -11,7 +11,7 @@ passwd USERNAME
 # A "New password" prompt should be displayed
 
 # IMPORTANT - ADD NEW USER TO SUDO GROUP!
-usermod -aG USERNAME
+usermod -aG sudo USERNAME
 
 # Switching to the new user
 su USERNAME
