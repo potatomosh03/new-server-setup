@@ -1,14 +1,17 @@
 # First make sure to update the distro!
-sudo apt update && sudo apt upgrade -y
+apt update && apt upgrade -y
 
 # Next Create new user! Only applicable if your only using root and only root is the user
 
 # -m [Auto Create Home Folder], -s [Specify what shell the user uses to login and uses (LMAO)], -c [Comment or discription of the user]
-sudo useradd -m -s /bin/bash -c "Owner Admin" USERNAME
+useradd -m -s /bin/bash -c "Owner Admin" USERNAME
 
 # Make sure to put a password of the newly created user
-sudo passwd USERNAME 
+passwd USERNAME 
 # A "New password" prompt should be displayed
+
+# IMPORTANT - ADD NEW USER TO SUDO GROUP!
+usermod -aG USERNAME
 
 # Switching to the new user
 su USERNAME
