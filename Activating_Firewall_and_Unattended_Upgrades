@@ -1,0 +1,37 @@
+# First make sure to update the distro!
+sudo apt update && sudo apt upgrade -y
+
+# Next Create new user! Only applicable if your only using root and only root is the user
+
+# -m [Auto Create Home Folder], -s [Specify what shell the user uses to login and uses (LMAO)], -c [Comment or discription of the user]
+sudo useradd -m -s /bin/bash -c "Owner Admin" USERNAME
+
+# Make sure to put a password of the newly created user
+sudo passwd USERNAME 
+# A "New password" prompt should be displayed
+
+# Switching to the new user
+su USERNAME
+
+# Make a .ssh folder if you/I want/need to access remotely make sure to change permission of folder to hidden
+mkdir ~/.ssh && chmod 700 ~/.ssh
+
+# Optional, check if you have unattended-upgrades install and activate it 
+sudo install unattended-upgrades
+sudo update && sudo uprades -y
+sudo dpkg-reconfigure --priority=low unattended-upgrades
+# Press Yes
+
+# Turn On Firewall
+sudo apt ufw install -y
+# Check if it is downloaded correctly 
+sudo ufw status
+
+# Make sure you allow your firewall to listen to whatever port your ssh is at (by default it should be port 22)
+sudo ufw allow 22
+
+# To activate the firewall
+sudo ufw enable
+
+# Make sure to set up ssh properly!
+
