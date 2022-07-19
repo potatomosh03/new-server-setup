@@ -26,7 +26,7 @@ sudo dpkg-reconfigure --priority=low unattended-upgrades
 # Press Yes
 
 # Turn On Firewall
-sudo apt ufw install -y
+sudo apt install ufw -y
 # Check if it is downloaded correctly 
 sudo ufw status
 
