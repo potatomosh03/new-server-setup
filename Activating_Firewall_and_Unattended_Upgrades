@@ -20,7 +20,7 @@ su USERNAME
 mkdir ~/.ssh && chmod 700 ~/.ssh
 
 # Optional, check if you have unattended-upgrades install and activate it 
-sudo install unattended-upgrades
+sudo apt install unattended-upgrades
 sudo update && sudo uprades -y
 sudo dpkg-reconfigure --priority=low unattended-upgrades
 # Press Yes
