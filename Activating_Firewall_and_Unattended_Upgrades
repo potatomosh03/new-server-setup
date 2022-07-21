@@ -23,7 +23,7 @@ mkdir ~/.ssh && chmod 700 ~/.ssh
 sudo apt install unattended-upgrades
 sudo apt update && sudo apt upgrade -y
 sudo dpkg-reconfigure --priority=low unattended-upgrades
-# Press Yes
+# Press Yess
 
 # Turn On Firewall
 sudo apt install ufw -y
